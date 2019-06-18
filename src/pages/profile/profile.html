@@ -1,0 +1,37 @@
+<ion-header >
+
+ <ion-navbar color="dark">
+     <ion-title>Profile</ion-title>
+ </ion-navbar>
+</ion-header> 
+
+<ion-content padding style="font-size : 16px;background-color:rgb(224, 220, 220);">
+    <ion-row align="center">
+        <ion-col><img [src]="getpicture" class="img-thumbnail" width="100px" height="100px" ></ion-col>
+    </ion-row>
+    <br>
+    <table class="table table-hover">
+
+        <tr>
+            <td>ชื่อ :</td>
+            <td><input type="text" class="form-control" style="height: 30px;font-size: 16px;" id="name" placeholder="Example input" [(ngModel)]="name"></td>
+        </tr>
+        <tr>
+            <td>นามสกุล :</td>
+            <td> <input type="text" class="form-control" style="height: 30px;font-size: 16px;" id="sername" placeholder="Example input" [(ngModel)]="sername"></td>
+        <tr>
+        <tr>
+            <td>ที่อยู่ :</td>
+            <td><textarea class="form-control" style="font-size: 16px;" name="Address" id="Address" rows="3" [(ngModel)]="address"></textarea></td>
+        <tr>
+        <tr>
+            <td>เบอร์โทร :</td>
+            <td><input type="number" class="form-control" style="height: 30px;font-size: 16px;" id="Tel" placeholder="Example input" [(ngModel)]="tel"></td>
+        <tr>
+    </table>
+
+<ion-col align="center"><button  ion-button block style="height: 35px;font-size: 16px;"  (click)="EditProfile()"> <ion-icon name="md-checkbox-outline" md="md-checkbox-outline">&nbsp;&nbsp;ยืนยันการแก้ไข</ion-icon></button></ion-col>        
+
+
+
+</ion-content>

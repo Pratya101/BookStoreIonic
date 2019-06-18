@@ -1,0 +1,33 @@
+<!--
+  Generated template for the ManagerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>รายการสั่งซื้อทั้งหมด</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-fab top right edge>
+        <button ion-fab color="danger" mini (click)="showAlert()"><ion-icon name="log-out"></ion-icon></button>
+      </ion-fab>
+
+    <ion-list>
+        <button ion-item *ngFor="let i of datasellList"
+        (click)="sellid = i.sellid;gotoDetailPay()"
+        > 
+        <ion-row>
+          <ion-col>รหัสสั่งซื้อ :S00{{i.sellid}}</ion-col>
+          <ion-col>ชื่อผู้สั่ง :{{i.nameuser }} {{i.sername }}</ion-col>
+        </ion-row>
+
+        </button>  
+      </ion-list>
+
+</ion-content>

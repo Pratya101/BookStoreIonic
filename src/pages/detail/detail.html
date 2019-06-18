@@ -1,0 +1,70 @@
+
+<ion-header>
+  <ion-navbar color="dark"><ion-title>
+      รายละเอียดสินค้า
+  </ion-title></ion-navbar>
+  <link rel="stylesheet" href="../../assets/bootstrap4/css/bootstrap.css">
+</ion-header>
+
+<ion-content padding style="background-color:rgb(224, 220, 220)">
+
+    
+<ion-card *ngFor="let i of datalist2"> <!-- วนลูปนำข้อมูลใน datalist2 มาเเสดง ซึ้งข้อมูลที่อยู่ใน datalist2 เป็นข้อมูลที่ Select มาจากฐานข้อมูล -->
+  <ion-card-content>
+    <table class="table table-hover" >
+  <tr>
+    <td colspan="2"><img [src]=i.bookImg></td> <!-- ใช้ เเท็ก Img เพื่อนำรูปภาพมาเเสดง -->
+  </tr>
+  <tr>
+    <th>ชื่อหนังสือ :</th>
+    <td>{{i.bookName}}</td><!-- เเสดงชื่อหนังสือ -->
+  </tr>
+  <tr>
+    <th>ผู้เเต่ง :</th>
+    <td>{{i.bookAuthor}}</td><!-- เเสดงชื่อผู้เเต่ง -->
+  </tr>
+  <tr>
+    <th>ประเภท :</th>
+    <td>{{i.bookType}}</td> <!-- เเสดงชื่อประเภทหนังสือ -->
+  </tr>
+  <tr>
+    <th>SBIN :</th>
+    <td>{{i.bookSBIN}}</td> <!-- เเสดงหมายเลข SBIN-->
+  </tr>
+  <tr>
+    <th>สำนักพิมพ์ :</th>
+    <td>{{i.bookPublisher}}</td> <!-- เเสดงชื่อสำนักพิมพ์ -->
+  </tr>
+  <tr>
+    <th>ปีที่พิมพ์ :</th>
+    <td>{{i.bookYear}}</td> <!-- เเสดงปีที่พิมพ์ -->
+  </tr>
+  <tr>
+    <th>น้ำหนัก :</th>
+    <td>{{i.bookWeight}} กรัม</td><!-- เเสดงน้ำหนัก -->
+  </tr>
+  <tr>
+    <th>ชนิดกระดาษ :</th>
+    <td>{{i.bookPaper}}</td> <!-- เเสดงชื่อชนิดกระดาษ-->
+  </tr>
+  <tr>
+    <th>เนื้อในหนังสือ :</th>
+    <td>{{i.bookInpaper}}</td> <!-- เเสดงเนื่อในหนังสือ -->
+  </tr>
+  <tr>
+    <th>ขนาดหนังสือ :</th>
+    <td>{{i.bookSize}}</td> <!-- เเสดงขนาดหนังสือ -->
+  </tr>
+  <tr>
+    <th>ราคา :</th>
+    <td>{{i.bookPrice}} บาท</td> <!-- เเสดงราคาหนังสือ-->
+  </tr>
+  <tr>
+    <th>จำนวนที่มีอยู่ :</th>
+    <td>{{i.bookAmount}} เล่ม</td> <!-- เเสดงจำนวนหนังสือ-->
+  </tr>
+    </table>
+<button ion-button  block color="danger" (click)="gotosell()"> <ion-icon name="md-cart" md="md-cart"></ion-icon>&nbsp;&nbsp;สั่งซื้อ</button> <!-- ปุ่มสั่งซื้อหนังสือ-->
+  </ion-card-content>
+</ion-card>
+</ion-content>

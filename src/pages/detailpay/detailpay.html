@@ -1,0 +1,44 @@
+
+<ion-header color="dark">
+    <link rel="stylesheet" href="../../assets/bootstrap4/css/bootstrap.css" >
+    <ion-navbar><ion-title>
+        อนุมัติการสั่งซื้อ
+    </ion-title></ion-navbar>
+  </ion-header>
+<ion-content padding>
+  <ion-card>
+    <ion-card-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col>รายการสั้งซื้อ : </ion-col>
+          <ion-col>{{bill}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-title>
+  
+    <ion-card-content>
+        <img [src]=picture>
+      <table class="table table-hover">
+        
+        <tr>
+            <th>ชื่อผู้สั่งสืนค้า</th>
+            <td>{{name}}</td>
+          </tr>
+          <tr>
+              <th>ชื่อหนังสือที่สั่ง</th>
+              <td>{{bookname}}</td>
+            </tr>
+            <tr>
+                <th>จำนวนที่สั่งซื้อ</th>
+                <td>{{amount}}</td>
+              </tr>
+              <tr>
+                  <th>ราคารวม</th>
+                  <td>{{total}}</td>
+                </tr>
+  </table>
+  
+  <button ion-button  block color="danger" (click)="UpdateAmount()"> <ion-icon name="md-cart" md="md-cart"></ion-icon>&nbsp;&nbsp;อนุมัติรายการสั่งซื้อ</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

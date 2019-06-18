@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>รายการสินค้า</ion-title>
+        <link href="../../assets/bootstrap4/css/bootstrap.css">
+    </ion-navbar>
+</ion-header>
+<ion-content class="bar bar-header bar-calm" style="background-color:rgb(224, 220, 220)">    
+        
+        <ion-list> 
+        <ion-item *ngFor="let i of dataPay">
+        <ion-row>
+            <ion-col>วันที่ : {{i.timestamp}}</ion-col>
+            <ion-col>รหัสการสั่งซื้อ :S00{{i.sellid}}</ion-col> 
+        </ion-row>
+        <ion-row>
+            <ion-col><button ion-button  color="secondary" outline (click)="billstatus=i.billstatus;sellstatus=i.sellstatus;CheckStatus()"> <ion-icon name="md-checkbox-outline" md="md-checkbox-outline">&nbsp;&nbsp;ตรวจสอบสถานะ</ion-icon></button></ion-col>        
+            <ion-col><button ion-button  color="primary" outline (click)="sellid=i.sellid;goSellDetail()"> <ion-icon name="md-paper" md="md-paper">&nbsp;&nbsp;รายละเอียด</ion-icon></button></ion-col>        
+        </ion-row>
+        
+        </ion-item>
+      </ion-list>
+</ion-content>

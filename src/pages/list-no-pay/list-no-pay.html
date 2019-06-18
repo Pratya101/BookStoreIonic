@@ -1,0 +1,22 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+      <ion-title>รายการยังไม่ได้ชำระเงิน</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  <ion-content style="background-color:rgb(224, 220, 220)">
+  
+      <ion-list>
+          <button ion-item *ngFor="let i of listNoPay"
+          (click)="sellid = i.sellid;gotoBill()"
+          > 
+          <ion-row>
+            <ion-col>รหัสสั่งซื้อ :S00{{i.sellid}}</ion-col>
+            <ion-col>ชื่อผู้สั่ง :{{i.nameuser }} {{i.sername }}</ion-col>
+          </ion-row>
+  
+          </button>  
+        </ion-list>
+  </ion-content>
+  
